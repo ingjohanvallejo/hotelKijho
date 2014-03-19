@@ -1,0 +1,30 @@
+backend_employees:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:Employee:index" }
+
+backend_employees_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:Employee:show" }
+
+backend_employees_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:Employee:new" }
+
+backend_employees_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:Employee:create" }
+    requirements: { _method: post }
+
+backend_employees_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:Employee:edit" }
+
+backend_employees_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:Employee:update" }
+    requirements: { _method: post|put }
+
+backend_employees_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:Employee:delete" }
+    requirements: { _method: post|delete }

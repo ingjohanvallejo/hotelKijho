@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Welcome Hotel Kijho</title>
+    </head>
+
+    <body>
+        {% if error %}
+            <div>{{ error.message }}</div>
+        {% endif %}
+        <form action="{{ path('backend_login_check') }}" method="post">
+            <label for="username">Email:</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="_password" />
+            <input type="submit" name="login" value="Login" />
+        </form>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+backend_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: BackendBundle:Default:index }
+
+backend_ocupations:
+    resource: "@BackendBundle/Resources/config/routing/ocupation.yml"
+    prefix:   /ocupations
+    
+backend_employees:
+    resource: "@BackendBundle/Resources/config/routing/employee.yml"
+    prefix:   /employees
+
+backend_clients:
+    resource: "@BackendBundle/Resources/config/routing/client.yml"
+    prefix:   /clients
+   
+backend_login:
+    pattern: /login
+    defaults: { _controller: BackendBundle:Default:login }
+
+backend_login_check:
+    pattern: /login_check
+
+backend_logout:
+    pattern: /logout

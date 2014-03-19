@@ -1,0 +1,30 @@
+backend_ocupations:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:Ocupation:index" }
+
+backend_ocupations_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:Ocupation:show" }
+
+backend_ocupations_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:Ocupation:new" }
+
+backend_ocupations_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:Ocupation:create" }
+    requirements: { _method: post }
+
+backend_ocupations_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:Ocupation:edit" }
+
+backend_ocupations_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:Ocupation:update" }
+    requirements: { _method: post|put }
+
+backend_ocupations_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:Ocupation:delete" }
+    requirements: { _method: post|delete }
